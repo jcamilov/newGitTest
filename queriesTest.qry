@@ -1,0 +1,8 @@
+/** Last update: 23.06.2018
+*/
+query consentsPerController {
+  description: "Return all the consents in which a controller participates"
+  statement: 
+    SELECT org.example.mynetwork.Consent 
+      WHERE (DataController CONTAINS [_$controllerIdParam])
+}
